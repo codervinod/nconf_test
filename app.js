@@ -1,9 +1,7 @@
 var nconf = require('nconf');
-var _=require('underscore');
-var test_config = require('./test.json');
 var nconf_defaults = {};
-nconf.argv().env();
-_.extend(nconf_defaults, test_config);
-nconf.defaults(nconf_defaults);
+
+nconf.argv().env().file({file:'./test.json'}).defaults({'redis-ip':'hi'});
 
 console.log(nconf.get('Test:DeviceError:Message'));
+console.log(nconf.get('redis-ip'));
