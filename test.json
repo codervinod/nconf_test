@@ -1,0 +1,14 @@
+{
+                "redis-ip": "127.0.0.1",
+                "debug_module":"put_the_module_to_debug_here",
+                "Test": {
+                                "DeviceError": {
+                                                "Enable": true,
+                                                "Message": "Testing Device Error"
+                                },
+                                "DownloadSuspend": {
+                                                "Enable": true,
+                                                "PageCountMax": 5
+                                }
+                }
+}
